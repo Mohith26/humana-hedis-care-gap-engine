@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.venv/
+venv/
+
+# Generated synthetic cohort (regenerate: python -m scripts.generate_data).
+# The generator + a small committed sample under samples/ are kept instead.
+data/
+
+# Keep committed results + samples.
+!results/
+!samples/
+
+# Env / secrets
+.env
+.env.*
+*.local
+
+# OS
+.DS_Store

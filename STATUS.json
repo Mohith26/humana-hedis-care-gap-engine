@@ -1,0 +1,65 @@
+{
+  "num": 118,
+  "slug": "humana-hedis-care-gap-engine",
+  "short_name": "CareGap",
+  "target": "Humana — Technology Internship (healthcare data / API; Medicare Advantage Stars / HEDIS quality)",
+  "status": "DONE",
+  "phase": "4/4 - eval + bench + report (all must-have v1 complete, measured)",
+  "measured_at": "2026-08-19",
+  "stack": "Python 3.12, FastAPI + uvicorn, pydantic, pandas, pytest + coverage, fhir.resources (schema-validation test only)",
+  "data_classification": "SYNTHETIC",
+  "phi_used": false,
+  "hedis_certified": false,
+  "hedis_note": "HEDIS-style / simplified measure logic, NOT NCQA-certified (representative code sets and windows)",
+  "data_path": "seeded synthetic FHIR R4 generator (datagen/generator.py, seed=42); Synthea's Java pipeline was impractical (no Java runtime available). Bundles are Synthea-shaped FHIR R4 and validated as schema-conformant FHIR R4B in tests.",
+  "metrics_captured": true,
+  "tests": "192 passed (pytest); 97% coverage on caregap/ + datagen/ + eval/",
+  "measures_implemented": ["CBP", "GSD", "EED", "BCS", "COL"],
+  "cohort": {
+    "members": 1000,
+    "fhir_resources": 2594,
+    "measurement_year": 2025,
+    "seed": 42
+  },
+  "gold_cohort_eval": {
+    "members": 26,
+    "evaluations": 130,
+    "overall_precision": 1.0,
+    "overall_recall": 1.0,
+    "overall_exact_match_accuracy": 1.0,
+    "per_measure_precision_recall_accuracy": {
+      "CBP": [1.0, 1.0, 1.0],
+      "GSD": [1.0, 1.0, 1.0],
+      "EED": [1.0, 1.0, 1.0],
+      "BCS": [1.0, 1.0, 1.0],
+      "COL": [1.0, 1.0, 1.0]
+    },
+    "note": "Hand-authored ground truth: 1.000 is a correctness/regression result validating measure logic + edge cases (age boundary, out-of-window, missing data, poor control, sex, mastectomy exclusion, deceased). NOT a generalization or real-world-accuracy claim."
+  },
+  "population_rates": {
+    "CBP": {"denominator": 331, "numerator": 170, "rate": 0.5136, "open_gaps": 161},
+    "GSD": {"denominator": 147, "numerator": 78, "rate": 0.5306, "open_gaps": 69, "poor_control": 49},
+    "EED": {"denominator": 147, "numerator": 93, "rate": 0.6327, "open_gaps": 54},
+    "BCS": {"denominator": 228, "numerator": 166, "rate": 0.7281, "open_gaps": 62},
+    "COL": {"denominator": 613, "numerator": 397, "rate": 0.6476, "open_gaps": 216}
+  },
+  "total_open_gaps": 562,
+  "members_with_any_gap": 427,
+  "throughput_members_per_sec": 345717,
+  "throughput_note": "engine compute path (all 5 measures per member); excludes FHIR parsing + I/O",
+  "latency": {
+    "measures_p50_ms": 2.162,
+    "measures_p95_ms": 2.288,
+    "care_gaps_p50_ms": 0.668,
+    "care_gaps_p95_ms": 0.704,
+    "methodology": "in-process FastAPI TestClient (ASGI), excludes network socket; 200 requests, 20 warmup excluded"
+  },
+  "repo_url": "https://github.com/Mohith26/humana-hedis-care-gap-engine",
+  "private": true,
+  "unmeasured": {
+    "network_latency": "___ (latency measured in-process via TestClient, not over a real HTTP/TCP socket)",
+    "end_to_end_throughput_with_parsing": "___ (throughput times the engine compute path only; FHIR parse + disk I/O not included)",
+    "real_world_gap_accuracy": "___ (forbidden — would require real member/PHI data; gold-cohort figures are correctness-only on synthetic hand-labeled truth)"
+  },
+  "notes": "All Must-have v1 delivered: synthetic FHIR R4 ingest -> clinical model; 5 HEDIS-style measures (CBP/GSD/EED/BCS/COL) with faithful denom/num/rate + per-member status using explicit ICD-10/LOINC/CPT code sets + age/sex/window logic; care-gap detection with reasons; risk-prioritized outreach worklist (gap-count x Stars weight); FastAPI /health /measures /members/{id}/care-gaps /gaps /outreach with consistent envelope + SYNTHETIC tag; hand-built 26-member gold cohort measuring per-measure precision/recall/accuracy incl. all required edge cases. SYNTHETIC data only, never PHI. Out-of-scope (not built): dashboard UI, Stars projected-rating rollup, FHIR MeasureReport output, real claims 837/835 ingestion, ML risk models, auth/HIPAA infra."
+}

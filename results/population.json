@@ -1,0 +1,60 @@
+{
+  "measured_at": "2026-08-19T00:23:26",
+  "data_classification": "SYNTHETIC",
+  "disclaimer": "SYNTHETIC data only \u2014 deterministically generated, no real Protected Health Information (PHI). HEDIS-style measure logic is simplified and NOT NCQA-certified.",
+  "measurement_year": 2025,
+  "seed": 42,
+  "cohort_size": 1000,
+  "fhir_resources": 2594,
+  "measures": [
+    {
+      "measure_id": "CBP",
+      "name": "Controlling High Blood Pressure",
+      "denominator": 331,
+      "numerator": 170,
+      "rate": 0.5136,
+      "open_gaps": 161,
+      "extra": {}
+    },
+    {
+      "measure_id": "GSD",
+      "name": "Glycemic Status (HbA1c) Control for Diabetes",
+      "denominator": 147,
+      "numerator": 78,
+      "rate": 0.5306,
+      "open_gaps": 69,
+      "extra": {
+        "poor_control": 49
+      }
+    },
+    {
+      "measure_id": "EED",
+      "name": "Eye Exam for Patients With Diabetes",
+      "denominator": 147,
+      "numerator": 93,
+      "rate": 0.6327,
+      "open_gaps": 54,
+      "extra": {}
+    },
+    {
+      "measure_id": "BCS",
+      "name": "Breast Cancer Screening",
+      "denominator": 228,
+      "numerator": 166,
+      "rate": 0.7281,
+      "open_gaps": 62,
+      "extra": {}
+    },
+    {
+      "measure_id": "COL",
+      "name": "Colorectal Cancer Screening",
+      "denominator": 613,
+      "numerator": 397,
+      "rate": 0.6476,
+      "open_gaps": 216,
+      "extra": {}
+    }
+  ],
+  "total_open_gaps": 562,
+  "members_with_any_gap": 427
+}

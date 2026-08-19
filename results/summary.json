@@ -1,0 +1,89 @@
+{
+  "measured_at": "2026-08-19T00:23:26",
+  "data_classification": "SYNTHETIC",
+  "disclaimer": "SYNTHETIC data only \u2014 deterministically generated, no real Protected Health Information (PHI). HEDIS-style measure logic is simplified and NOT NCQA-certified.",
+  "measurement_year": 2025,
+  "cohort_size": 1000,
+  "fhir_resources": 2594,
+  "seed": 42,
+  "gold_cohort": {
+    "members": 26,
+    "evaluations": 130,
+    "overall_gap_precision": 1.0,
+    "overall_gap_recall": 1.0,
+    "overall_exact_match_accuracy": 1.0,
+    "per_measure": {
+      "CBP": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "gap_accuracy": 1.0,
+        "exact_match_accuracy": 1.0
+      },
+      "GSD": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "gap_accuracy": 1.0,
+        "exact_match_accuracy": 1.0
+      },
+      "EED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "gap_accuracy": 1.0,
+        "exact_match_accuracy": 1.0
+      },
+      "BCS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "gap_accuracy": 1.0,
+        "exact_match_accuracy": 1.0
+      },
+      "COL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "gap_accuracy": 1.0,
+        "exact_match_accuracy": 1.0
+      }
+    }
+  },
+  "population": {
+    "CBP": {
+      "denominator": 331,
+      "numerator": 170,
+      "rate": 0.5136,
+      "open_gaps": 161
+    },
+    "GSD": {
+      "denominator": 147,
+      "numerator": 78,
+      "rate": 0.5306,
+      "open_gaps": 69
+    },
+    "EED": {
+      "denominator": 147,
+      "numerator": 93,
+      "rate": 0.6327,
+      "open_gaps": 54
+    },
+    "BCS": {
+      "denominator": 228,
+      "numerator": 166,
+      "rate": 0.7281,
+      "open_gaps": 62
+    },
+    "COL": {
+      "denominator": 613,
+      "numerator": 397,
+      "rate": 0.6476,
+      "open_gaps": 216
+    }
+  },
+  "total_open_gaps": 562,
+  "members_with_any_gap": 427,
+  "throughput_members_per_sec": 345716.7,
+  "latency": {
+    "measures_p50_ms": 2.162,
+    "measures_p95_ms": 2.288,
+    "care_gaps_p50_ms": 0.668,
+    "care_gaps_p95_ms": 0.704
+  }
+}

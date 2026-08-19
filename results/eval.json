@@ -1,0 +1,108 @@
+{
+  "measured_at": "2026-08-19T00:23:26",
+  "data_classification": "SYNTHETIC",
+  "disclaimer": "SYNTHETIC data only \u2014 deterministically generated, no real Protected Health Information (PHI). HEDIS-style measure logic is simplified and NOT NCQA-certified.",
+  "measurement_year": 2025,
+  "gold_cohort_members": 26,
+  "gold_member_measure_evaluations": 130,
+  "per_measure": {
+    "CBP": {
+      "name": "Controlling High Blood Pressure",
+      "labeled_members": 26,
+      "eligible_members": 5,
+      "true_gaps": 3,
+      "confusion": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 23
+      },
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "gap_accuracy": 1.0,
+      "exact_match_accuracy": 1.0
+    },
+    "GSD": {
+      "name": "Glycemic Status (HbA1c) Control for Diabetes",
+      "labeled_members": 26,
+      "eligible_members": 6,
+      "true_gaps": 4,
+      "confusion": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "tn": 22
+      },
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "gap_accuracy": 1.0,
+      "exact_match_accuracy": 1.0
+    },
+    "EED": {
+      "name": "Eye Exam for Patients With Diabetes",
+      "labeled_members": 26,
+      "eligible_members": 6,
+      "true_gaps": 3,
+      "confusion": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 23
+      },
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "gap_accuracy": 1.0,
+      "exact_match_accuracy": 1.0
+    },
+    "BCS": {
+      "name": "Breast Cancer Screening",
+      "labeled_members": 26,
+      "eligible_members": 6,
+      "true_gaps": 3,
+      "confusion": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 23
+      },
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "gap_accuracy": 1.0,
+      "exact_match_accuracy": 1.0
+    },
+    "COL": {
+      "name": "Colorectal Cancer Screening",
+      "labeled_members": 26,
+      "eligible_members": 19,
+      "true_gaps": 5,
+      "confusion": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "tn": 21
+      },
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "gap_accuracy": 1.0,
+      "exact_match_accuracy": 1.0
+    }
+  },
+  "overall": {
+    "confusion": {
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "tn": 112
+    },
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "gap_accuracy": 1.0,
+    "exact_match_accuracy": 1.0
+  }
+}

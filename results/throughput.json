@@ -1,0 +1,10 @@
+{
+  "measured_at": "2026-08-19T00:23:26",
+  "data_classification": "SYNTHETIC",
+  "cohort_size": 1000,
+  "measures_per_member": 5,
+  "repeats": 5,
+  "members_per_sec_best": 345716.7,
+  "members_per_sec_mean": 343813.5,
+  "member_measure_evals_per_sec_best": 1728583.4
+}

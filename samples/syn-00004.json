@@ -1,0 +1,30 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:caregap:data-classification",
+        "code": "SYNTHETIC"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "syn-00004",
+        "gender": "male",
+        "birthDate": "1984-07-09",
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:caregap:data-classification",
+              "code": "SYNTHETIC"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:caregap:data-classification",
+        "code": "SYNTHETIC"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "syn-00003",
+        "gender": "female",
+        "birthDate": "1961-11-20",
+        "meta": {
+          "tag": [
+            {
+              "system": "urn:caregap:data-classification",
+              "code": "SYNTHETIC"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/syn-00003"
+        },
+        "performedDateTime": "2023-12-11",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "77052"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
